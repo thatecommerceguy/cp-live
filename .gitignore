@@ -1,0 +1,4 @@
+assets
+config/settings_data.json
+templates/**/*.json
+sections/*.json
