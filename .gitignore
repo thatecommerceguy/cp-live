@@ -1,4 +1,6 @@
+# Theme #
+##########
 assets
-config/settings_data.json
+settings_data.json
 templates/**/*.json
 sections/*.json
