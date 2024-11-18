@@ -300,6 +300,24 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    <script>
+      analytics.subscribe('product_viewed', (event) => {
+        // Example for accessing event data
+        const productPrice = event.data.productVariant.price.amount;
+      
+        const productTitle = event.data.productVariant.title;
+      
+        const payload = {
+          event_name: event.name,
+          event_data: {
+            productPrice: productPrice,
+            productTitle: productTitle,
+          },
+        };
+    
+        console.log(`${productTitle}`);
+      });
+    </script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
